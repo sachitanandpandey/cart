@@ -26,6 +26,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(os.path.dirname(__file__)),"static","templates"),
+)
+
 
 # Application definition
 
@@ -78,7 +82,16 @@ USE_L10N = True
 USE_TZ = True
 
 
+MEDIA_ROOT= os.path.join(os.path.dirname(os.path.dirname(__file__)),"static","media")
+
+MEDIA_URL = '/media/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)),"static","static-only")
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(os.path.dirname(__file__)),"static","static"),
+)
