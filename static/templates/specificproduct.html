@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+        <div id="singleProduct">
+            <p> Name: {{ product }}</p>
+
+            <p>Brand:<a href="/brand/{{product.brand.slug}}/">{{product.brand}}</a></p>
+            <p>Price: {{product.price}}</p>
+
+
+        </div>
+
+{% endblock %}
